@@ -36,9 +36,9 @@ pm_record = function(keys, values) {
   recordOutputType = getRecordOutputType()
   mimeBundle = list()
   mimeBundle[[recordOutputType]] = list()
-  for (i in seq_along(key)) {
-    k = key[i]
-    v = value[[i]]
+  for (i in seq_along(keys)) {
+    k = keys[i]
+    v = values[[i]]
     mimeBundle[[recordOutputType]][[k]] = v
   }
   IRdisplay::publish_mimebundle(mimeBundle)
